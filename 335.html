@@ -1,0 +1,44 @@
+
+<html>
+    <head><script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    var ip = "8.8.8.8";
+    var api_key = "at_u8rvIKeXtbvp1My6ly3fbGUwW9Jag";
+    $(function () {
+       $.ajax({
+           url: "https://geo.ipify.org/api/v1",
+           dataType: "jsonp",
+           data: {apiKey: api_key, ipAddress: ip},
+           success: function(data) {
+               $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
+           }
+       });
+    });
+</script>
+     <meta charset="UTF-8">
+     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+     <style type="text/css">
+                body, html
+                {
+                    margin: 0; padding: 0; height: 100%; overflow: hidden;  -webkit-backface-visibility: visible;
+                }
+                #content
+                {
+                    position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+                }
+            </style>
+    </head>
+    <body> 
+
+    <script type="text/javascript">
+    function onFrameLoad() {
+            do stuff
+    };
+    </script>
+
+    <div id="content">
+    <iframe onload="onFrameLoad(this)" id="app" src="imbind.crd.co" frameborder="0" height="100%" width="100%"></iframe>
+    </body>
+    </html>
+
+</html>
